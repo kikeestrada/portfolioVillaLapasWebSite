@@ -1,0 +1,180 @@
+.menu-container{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.menu-wrapper{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    
+    @include bp(md){
+        display: block;
+    }
+    
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(125,185,232,0) 100%);
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(125,185,232,0) 100%);
+        background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(125,185,232,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#007db9e8',GradientType=0 );
+   
+        @include transition(all .5s ease);
+    }
+    
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -130px;
+        left: -10%;
+        background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 25%, rgba(255,255,255,0.75) 75%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 25%,rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
+        background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 25%,rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+
+        width: 120%;
+        height: 270px;
+        border-radius: 50%;
+        
+        @include transition(all .5s ease);
+    }
+    
+    &.small{
+        &:after{
+            opacity: 0;
+            top: -40px;
+        }
+        
+        &:before{
+            top: 0px;
+            height: 60px;
+            border-radius: 0;
+        }
+        
+        .main-menu{
+            li{
+                padding: 20px 0 0;
+            }
+            .logo{
+                padding: 7px 0 0;
+                img{
+                    max-width: 65px;
+                }
+            }
+        }
+    }
+}
+
+.menu-mobile{
+    @include clearfix();
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 20px;
+    
+    @include bp(md){
+        display: none;
+    }
+    
+    img{
+        max-width: 50px;
+        
+        @include bp(sm){
+            max-width: 70px;
+        }
+    }
+    
+    .menu-btn{
+        position: absolute;
+        top:10px;
+        right: 20px;
+        width: 33px;
+        height: 33px;
+        background-color: $green-20;
+        border-radius: 2px;
+        padding: 8px 6px;
+        cursor: pointer;
+        @include transition(all 0.2s ease);
+        
+        @include bp(sm){
+            top: 20px;
+        }
+
+        &:hover{
+            padding: 6px 6px;
+
+            span{
+                &:nth-child(2){
+                    margin: 6px 0;
+                }
+            }
+        }
+
+        span{
+            display: block;
+            height: 3px;
+            width: 21px;
+            background-color: white;
+
+            &:nth-child(2){
+                @include transition(all 0.2s ease);
+                margin: 4px 0;
+            }
+        }
+    }
+}
+
+.main-menu{
+    @include clearfix();
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+    
+    li{
+        @include bp(md){
+            display: block;
+            float: left;
+            @include rem(font-size, 1.8rem);
+            width: 14.2%;
+            text-align: center;
+            padding: 40px 0 0;
+            @include transition(all .5s ease);
+        }
+        
+        a{
+            @include bp(md){
+               text-decoration: none;
+                color: $grey-2f;
+                font-family: 'RobotoRegular', Verdana, sans-serif; 
+            }  
+        }
+    }
+    
+    .logo{
+        padding: 17px 0 0;
+        @include transition(all .5s ease);
+        img{
+            max-width: 130px;
+            @include transition(all .5s ease);
+        }
+    }
+    
+    .book-now{
+        color: white;
+        background-color: $red-a3;
+        border-radius: 2px;
+        padding: 6px 12px;
+        
+        &:hover{
+            color: $grey-c1;
+        }
+    }
+}

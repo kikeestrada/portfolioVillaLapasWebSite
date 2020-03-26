@@ -1,0 +1,124 @@
+.interna{
+    .page-content{
+        .info{
+            h1{
+                @include rem(font-size, 6.7rem);
+                font-family: 'RainyDays', Verdana, sans-serif;
+                color: $green-2c;
+                margin: 0 0 0 0;
+            }
+            
+            h3{
+                @include rem(font-size, 4.0rem);
+                font-family: 'gadugib', Verdana, sans-serif;
+                color: $yellow-f3;
+            }
+            
+            p{
+                @include rem(font-size, 1.2rem);
+                font-family: 'RobotoLight', Verdana, sans-serif;
+                color: $grey-4f;
+                margin: 20px 0 40px;
+            }
+            
+            a{
+                @include bookBtn();
+            }
+            
+            .description-left{
+                padding: 50px 15px;
+                
+                @include bp(md) {
+                    padding: 110px 45px 0 105px;
+                }
+            }
+            
+            .description-right{
+                padding: 50px 15px;
+                
+                @include bp(md) {
+                    padding: 70px 105px 0 45px;
+                }
+            }
+        }
+        
+        .quote{
+            position: relative;
+            //background-color: $green-2a;
+            
+            img{
+                @include bp(md) {
+                    max-height: 389px;
+                }
+            }
+            
+            .quote-wrapper{
+                position: relative;
+                min-height: 389px;
+                
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -119px;
+                    left: 0;
+                    width: 100%;
+                    height: 120px;
+                    
+                    @include bp(md) {
+                        top: 0;
+                        left: -150px;
+                        width: 150px;
+                        height: 100%;
+                    }
+                }
+            }
+            
+            .quote-content{
+                position: absolute;
+                padding: 10px 15px 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: 'RobotoLight', Verdana, sans-serif;
+                @include rem(font-size, 1.2rem);
+                color: white;
+                
+                @include bp(md) {
+                    padding: 10px 15px 40px 30px;
+                }
+                
+                h2{
+                    @include rem(font-size, 2.4rem);
+                    font-family: 'RobotoRegular', Verdana, sans-serif;
+                    font-weight: bold;
+                }
+                
+                p{
+                    margin: 10px 0 20px;
+                    line-height: 1;
+                }
+                
+                ul{
+                    list-style-type: disc;
+                    list-style-position: inside;
+                    
+                    li{
+                        margin: 0 0 5px 0;
+                    }
+                }
+            }
+            
+            p{
+                @include rem(font-size, 1.2rem);
+                font-family: 'RobotoLight', Verdana, sans-serif;
+                color: $grey-33;
+                margin: 20px 0 40px;
+                color: white;
+            }
+            
+            a{
+                @include bookBtn();
+            }
+        }   
+    }
+}

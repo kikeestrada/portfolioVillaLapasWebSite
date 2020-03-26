@@ -1,0 +1,52 @@
+.interna{
+    &.tours{
+        .page-content{
+            .info{
+                h1{
+                    margin: 0 0 40px 0;
+                }
+                
+                p{
+                    margin: 20px 0;
+                    
+                    &:last-of-type{
+                        margin: 20px 0 30px;
+                    }
+                }
+                
+                .description-left{
+                    padding: 50px 15px;
+                    
+                    @include bp(md) {
+                        padding: 40px 45px 0 105px;
+                    }
+                }
+            }
+            
+            .quote{
+                background-color: $blue-10;
+                
+                .quote-wrapper{
+                    &::before{
+                        background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(16,127,206,0.99) 99%, rgba(16,127,206,1) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(16,127,206,0.99) 99%,rgba(16,127,206,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(16,127,206,0.99) 99%,rgba(16,127,206,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#107fce',GradientType=0 ); /* IE6-9 */
+                        
+                        @include bp(md) {
+                            background: -moz-linear-gradient(left,  rgba(125,185,232,0) 0%, rgba(16,127,206,0.99) 99%, rgba(16,127,206,1) 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(16,127,206,0.99) 99%,rgba(16,127,206,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to right,  rgba(125,185,232,0) 0%,rgba(16,127,206,0.99) 99%,rgba(16,127,206,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#107fce',GradientType=1 ); /* IE6-9 */
+                        }
+                    }
+                }
+                
+                .quote-content{
+                    background-color: $blue-10;
+                }
+            }
+            
+        }
+    }
+}
