@@ -1,3 +1,3 @@
-# villalapas
+# villalapas gh-pages
 
-##https://kikeestrada.github.io/villalapas/rooms.html
+##https://kikeestrada.github.io/portfolioVillaLapasWebSite
