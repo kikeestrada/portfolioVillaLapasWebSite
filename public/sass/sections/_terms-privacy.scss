@@ -1,0 +1,47 @@
+.interna{
+    &.terms-privacy{
+        .page-content{
+            .info{
+                h1{
+                    @include rem(font-size, 6.7rem);
+                    font-family: 'RainyDays', Verdana, sans-serif;
+                    color: $green-2c;
+                    margin: 0 0 0 0;
+                }
+                
+                h3{
+                    @include rem(font-size, 3.6rem);
+                    font-family: 'gadugib', Verdana, sans-serif;
+                    color: $grey-33;
+                }
+                
+                p{
+                    @include rem(font-size, 1.2rem);
+                    font-family: 'RobotoLight', Verdana, sans-serif;
+                    color: $grey-4f;
+                    margin: 20px 0 40px;
+                }
+                
+                a{
+                    @include bookBtn();
+                }
+                
+                .description-left{
+                    padding: 50px 15px;
+                    
+                    @include bp(md) {
+                        padding: 110px 45px 0 105px;
+                    }
+                }
+                
+                .description-right{
+                    padding: 50px 15px;
+                    
+                    @include bp(md) {
+                        padding: 70px 105px 0 45px;
+                    }
+                }
+            }
+        }
+    }
+}

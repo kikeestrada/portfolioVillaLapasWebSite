@@ -1,0 +1,56 @@
+.video-yt {
+  min-height: 500px;
+  position: relative;
+  
+  @media screen and (min-width: $md) {
+    width: 100%;
+    height: 100vh;
+    background-color: $grey-2f;
+
+    //Video iframe
+    iframe {
+      width: 100%;
+      height: 100vh;
+      opacity: 0;
+      position: relative;
+      z-index: -1;
+    }
+
+    //Placeholder
+    background-image: url(../images/headers/home-header.jpg);
+    background-position: center;
+    background-size: cover;
+
+    .play {
+      display: block;
+      position: absolute;
+      width: 119px;
+      height: 119px;
+      margin: auto;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      //background: url(../images/loader.svg);
+      background-size: 100%;
+      opacity: .5;
+      transition: opacity .25s;
+
+      &.ready{
+        background: url(../images/icons/icon-play.png);
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .skip {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 30px;
+      z-index: 1000;
+    }
+  }
+}

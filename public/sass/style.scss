@@ -1,0 +1,24 @@
+//GLOBAL
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "animations";
+@import "global";
+
+//LAYOUT
+@import "layout/header";
+@import "layout/menu";
+@import "layout/footer";
+
+//COMPONENTS
+@import "components/sidr-menu";
+@import "components/video";
+@import "components/custom-select";
+
+//SECTIONS
+@import "sections/home";
+@import "sections/interna";
+@import "sections/rooms";
+@import "sections/weddings";
+@import "sections/tours";
+@import "sections/terms-privacy";

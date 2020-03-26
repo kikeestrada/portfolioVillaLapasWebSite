@@ -1,0 +1,142 @@
+.home{
+    .video-home{
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 1280px;
+        min-height: 0;
+        height: 200px;
+        background-color: $grey-2f;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        margin: 0 auto;
+        
+        //Placeholder
+        background-image: url(../images/headers/home-header.jpg);
+        background-position: center;
+        background-size: cover;
+
+        @include bp(sm){
+            min-height: 500px;
+        }
+
+        @include bp(md){
+            height: 640px;
+        }
+
+        @include bp(xl){
+            height: 1110px;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: -1;
+        }
+
+        .play {
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-size: 100%;
+            transition: opacity .25s;
+            
+            @include bp(sm){
+                width: 115px;
+                height: 115px;
+                opacity: .5;
+            }
+
+            &.ready{
+                background-image: url(../images/icons/icon-play.png);
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+  
+    .grid{
+        figure{
+            height: 260px;
+            overflow: hidden;  
+        }
+        
+        img{
+            width: 100%;
+            min-height: 260px;
+        }
+        
+        .col-height-2{
+            figure{
+                height: 520px;
+                
+                img{
+                    min-height: 520px;
+                    max-height: 520px;
+                }
+            }
+        }
+        
+        .caption{
+            position: absolute;
+            bottom: 95px;
+            left: 20px;
+            font-family: 'RobotoRegular', Verdana, sans-serif;
+            color: white;
+            max-width: 300px;
+            
+            @include bp(sm){
+                left: 30px;
+                max-width: 320px;
+            }
+
+            @include bp(md){
+                left: 70px;
+                max-width: 400px;
+            }
+            
+            h2{
+                @include rem(font-size, 2.4rem);
+            }
+            
+            p{
+                @include rem(font-size, 1.4rem);
+                margin: 20px 0;
+            }
+            
+            a{
+                @include bookBtn();
+            }
+        }
+    }
+    
+    .tripadvisor{
+        padding: 110px 15px 85px;
+        
+        h2{
+           @include rem(font-size, 1.2rem);
+           text-align: center;
+        }
+        
+        figure{
+            text-align: center;
+            
+            img{
+                max-width: 160px;
+            }
+        }
+        
+        .picture{
+            margin: 20px 0;
+        }
+    }
+}
